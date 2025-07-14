@@ -1,0 +1,79 @@
+/* Make react-tabs tab text white */
+.pv-tab-button .react-tabs__tab span {
+  color: #fff !important;
+}
+
+/* Selected tab: keep text red */
+.pv-tab-button .react-tabs__tab--selected span {
+  color: #ff2b60 !important;
+}
+/* Portfolio tabs */
+.pv-tab-button {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+/* Tag scroll wrapper with buttons */
+.tag-scroll-wrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-top: 12px;
+}
+
+/* Tag list container */
+.project-tags-scroll {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: hidden;
+  list-style: none;
+  padding: 0 8px;
+  margin: 0;
+  gap: 8px;
+  scroll-behavior: smooth;
+  flex: 1;
+}
+
+/* Each tag */
+.project-tags-scroll li {
+  white-space: nowrap;
+  background-color: #eee;
+  color: #333;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  flex-shrink: 0;
+}
+
+/* Arrow buttons */
+.scroll-btn {
+  border: none;
+  background: #ddd;
+  color: #333;
+  font-size: 16px;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  text-align: center;
+  line-height: 24px;
+  cursor: pointer;
+  padding: 0;
+  margin: 0 4px;
+  transition: background 0.2s ease;
+}
+
+.scroll-btn:hover {
+  background: #ff2b60;
+}
+
+/* Optional description styling */
+.project-description {
+  margin: 10px 0;
+  font-size: 14px;
+  color: #999;
+  line-height: 1.5;
+}

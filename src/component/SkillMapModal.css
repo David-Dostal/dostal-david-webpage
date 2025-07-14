@@ -1,0 +1,42 @@
+.skillmap-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background-color: rgba(0, 0, 0, 0.6); /* More transparent */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.skillmap-modal {
+  position: relative;
+  background: #101010;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.8);
+}
+
+.skillmap-img {
+  max-width: 90vw;
+  max-height: 90vh;
+  width: auto;
+  height: auto;
+  border-radius: 8px;
+  user-select: none;
+  pointer-events: auto;
+  touch-action: none;
+  object-fit: contain;
+}
+
+.close-btn {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  font-size: 1.5rem;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+}
