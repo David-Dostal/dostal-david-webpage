@@ -19,7 +19,7 @@ import SkillMapModal from "../component/SkillMapModal"; // update path if needed
 
 import PortfolioWithCategoryTabs from "./Portfolio"; // if you renamed Portfolio.jsx to act as category tabs
 import { PortfolioListContent } from "../data/portfolio/PortfolioListContent";
-
+import "../assets/css/dual-ball-loader.css";
 
 
 
@@ -38,6 +38,11 @@ const PortfolioLanding = () => {
       "Ever since high school, I wanted to be educated in as many fields as possible, so that I can view the world from different perspectives. This approach has continuously helped me strengthen my problem-solving skills. I am under belief that the proven orthodox solution may not always be the most effective one and that there is always space for improvement. My passion for staying up to date with the latest technologies also ensures, that my work attitude stays agile and fresh. I am eager to join an organization where I can continue to grow and make a significant impact.";
   const PostList = BlogContent.slice(0, 3);
   const [isSkillMapOpen, setIsSkillMapOpen] = useState(false);
+  const [selectedCategory, setSelectedCategory] = useState('All');
+
+  const handleCategoryChange = (category) => {
+    setSelectedCategory(category);
+  };
 
   return (
     <div className="active-dark">
@@ -99,7 +104,6 @@ const PortfolioLanding = () => {
         </div>
       </div>
       {/* End Slider Area   */}
-
 {/* Start About Area */}
 <div id="about" className="fix">
   <div className="about-area ptb--120 bg_color--1">
@@ -179,7 +183,7 @@ const PortfolioLanding = () => {
         <div className="portfolio-area ptb--120 bg_color--1">
           <div className="portfolio-sacousel-inner">
             <div className="container">
-              <div className="row">
+              <div className="row justify-content-center">
                 <div className="col-lg-12">
                   <div className="section-title text-center service-style--3 mb--30 mb_sm--0">
                     <h2 className="title">My Projects</h2>
@@ -189,14 +193,15 @@ const PortfolioLanding = () => {
                   </div>
                 </div>
               </div>
-              <div className="row">
-<PortfolioWithCategoryTabs
-  styevariation="text-center mt--40"
-  column="col-lg-4 col-md-6 col-sm-6 col-12"
-  item="6"
-  projects={PortfolioListContent}
-/>
-
+              <div className="row justify-content-center">
+                <PortfolioWithCategoryTabs
+                  styevariation="text-center mt--40"
+                  column="col-lg-4 col-md-6 col-sm-6 col-12"
+                  item="6"
+                  projects={PortfolioListContent}
+                  selectedCategory={selectedCategory}
+                  onCategoryChange={handleCategoryChange}
+                />
               </div>
 
             </div>
@@ -224,6 +229,7 @@ const PortfolioLanding = () => {
         </ScrollToTop>
       </div>
       {/* End Back To Top */}
+
     </div>
   );
 };
