@@ -47,7 +47,7 @@ class Contact extends Component {
               {/* Start Single Address  */}
               <div className="col-lg-4 col-md-6 col-sm-6 col-12 ">
                 <div className="rn-address ">
-                  <div className="icon">
+                  <div className="icon bg_color--1">
                     <FiHeadphones />
                   </div>
                   <div className="inner ">
@@ -63,7 +63,7 @@ class Contact extends Component {
               {/* Start Single Address  */}
               <div className="col-lg-4 col-md-6 col-sm-6 col-12 mt_mobile--50">
                 <div className="rn-address">
-                  <div className="icon">
+                  <div className="icon bg_color--1">
                     <FiMail />
                   </div>
                   <div className="inner">
@@ -79,7 +79,7 @@ class Contact extends Component {
               {/* Start Single Address  */}
               <div className="col-lg-4 col-md-6 col-sm-6 col-12 mt_md--50 mt_sm--50">
                 <div className="rn-address">
-                  <div className="icon">
+                  <div className="icon bg_color--1">
                     <FiMapPin />
                   </div>
                   <div className="inner">

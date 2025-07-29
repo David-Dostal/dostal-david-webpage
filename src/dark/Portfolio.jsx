@@ -112,15 +112,19 @@ class Portfolio extends Component {
                               {filtered.map((value, index) => (
                                 <div className="portfolio" key={index}>
                                   <div className="thumbnail-inner">
-                                    <div
-                                      className={`thumbnail ${value.image}`}
-                                    ></div>
-                                    <div
-                                      className={`bg-blr-image ${value.image}`}
-                                    ></div>
+                                    <img
+                                      className="thumbnail"
+                                      src={value.image}
+                                      alt={value.title}
+                                    />
+                                    <img
+                                      className="bg-blr-image"
+                                      src={value.image}
+                                      alt={value.title + " blurred"}
+                                    />
                                   </div>
                                   <div className="content">
-                                    <div className="inner">
+  <div className="portfolio-card-bottom">
                                       <p>{value.category}</p>
                                       <h4>
                                         <a
@@ -132,12 +136,12 @@ class Portfolio extends Component {
                                         </a>
                                       </h4>
                                       {value.description && (
-                                        <p className="project-description">
+                                        <p className="project-details">
                                           {value.description}
                                         </p>
                                       )}
                                       {value.tags && (
-                                        <div className="tag-scroll-wrapper">
+                                        <div className="tag-scroll-wrapper project-details">
                                           <button
                                             className="scroll-btn left"
                                             onClick={() => this.scrollTagsLeft(index)}
@@ -162,7 +166,7 @@ class Portfolio extends Component {
                                       )}
                                       <div className="portfolio-button">
                                         <a
-                                          className="rn-btn"
+                                          className="rn-btn "
                                           href={value.github}
                                           target="_blank"
                                           rel="noopener noreferrer"

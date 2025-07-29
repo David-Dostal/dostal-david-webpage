@@ -1,7 +1,35 @@
+import dostal_webpage from '../../assets/images/projects/dostal-webpage.png';
+import la_crimes from '../../assets/images/projects/la-crimes.png';
+import translation_manager_android from '../../assets/images/projects/translation_manager_android.jpg';
+import saywhatsnap from '../../assets/images/projects/saywhatsnap.png';
+import techvia from '../../assets/images/projects/techvia.png';
+import ordering_system from '../../assets/images/projects/ordering-system.png';
+import spa_database_design from '../../assets/images/projects/spa-database-design.png';
+import car_marketplace_design from '../../assets/images/projects/car-marketplace-design.png';
+import smartphone_repair_service from '../../assets/images/projects/smartphone-repair-service.png';
+import weather_api from '../../assets/images/projects/weather_api.png';
+import spa_reservatin_system_design from '../../assets/images/projects/spa_reservatin_system_design.png';
+import image1 from '../../assets/images/portfolio/dp-portfolio-04.jpg';
+import zebra_puzzle_prolog from '../../assets/images/projects/zebra-puzzle-prolog.png';
+import bang_java from '../../assets/images/projects/bang_java.png';
 
 export const PortfolioListContent = [
+
+        {
+        image: dostal_webpage,
+        category: 'Web Page',
+        title: 'David Dostál Webpage',
+        description: 'My WOP webpage, showcasing my projects, skills, and contact information. Built with React.',
+        tags: [
+            "React",
+            "JavaScript",
+            "HTML",
+            "CSS",
+        ],
+        github: 'https://github.com/David-Dostal/dostal-david-webpage'
+    },
     {
-        image: 'image-1',
+        image: la_crimes    ,
         category: 'Web App',
         title: 'LA Crimes enterprise app',
         description: 'An enterprise-grade Spring Boot application for managing crime data, featuring secured REST APIs with OAuth2/Keycloak, role-based access, full CRUD operations, OpenAPI documentation, and integrated testing.',
@@ -24,7 +52,7 @@ export const PortfolioListContent = [
         github: 'https://github.com/David-Dostal/la-crimes-enterprise'
     },
     {
-        image: 'image-2',
+        image: saywhatsnap,
         category: 'Android',
         title: 'SayWhatApp',
         description: 'A Kotlin Android app using Jetpack Compose to translate text from images with ML Kit and LibreTranslate, storing results with Room and showing locations on Google Maps. Built with MVVM, Hilt, and includes instrumentation, UI, and API tests.',
@@ -42,16 +70,11 @@ export const PortfolioListContent = [
             "Gradle",
             "UI Testing",
             "API Testing"
-        ]
-        ,
+        ],
         github: 'https://github.com/David-Dostal/saywhatsnap-android'
     },
-
-
-
-
     {
-        image: 'image-3',
+        image: ordering_system,
         category: 'Web App',
         title: 'Ordering System',
         description: 'A Dockerized Python microservices app for browsing items, adding to cart, and placing orders. Built with FastAPI, MongoDB, PostgreSQL, gRPC, and RabbitMQ, with Google OAuth2 auth and separate admin and user interfaces.',
@@ -71,13 +94,11 @@ export const PortfolioListContent = [
             "AsyncIO",
             "API Testing",
             "Keycloak"
-        ]
-
-        ,
+        ],
         github: 'https://github.com/David-Dostal/ordering-system-microservices'
     },
     {
-        image: 'image-4',
+        image: techvia,
         category: 'Web App',
         title: 'Quiz Game',
         description: 'A fully frontend-driven quiz game using Vue 3, TypeScript, Vuetify, and Pinie, with routing, user state, and Cypress end-to-end testing.',
@@ -90,12 +111,11 @@ export const PortfolioListContent = [
             "Cypress",
             "SPA",
             "E2E Testing"
-        ]
-        ,
+        ],
         github: 'https://github.com/David-Dostal/quiz-game-frontend'
     },
     {
-        image: 'image-3',
+        image: translation_manager_android,
         category: 'Android',
         title: 'Transaction Manager',
         description: 'A localized Kotlin Android app using Jetpack Compose to manage personal finances, featuring a stateful UI, modular architecture, and data visualization.',
@@ -105,12 +125,11 @@ export const PortfolioListContent = [
             "MVVM",
             "Room",
             "DataStore"
-        ]
-        ,
+        ],
         github: 'https://github.com/David-Dostal/transaction-manager-android'
     },
     {
-        image: 'image-4',
+        image: translation_manager_android,
         category: 'iOS',
         title: 'Transaction Manager',
         description: "A localized Swift iOS app using SwiftUI to manage personal finances, featuring a stateful UI, modular MVVM architecture, Core Data storage, and data visualization.",
@@ -125,7 +144,7 @@ export const PortfolioListContent = [
         github: 'https://github.com/David-Dostal/transaction-manager-ios'
     },
     {
-        image: 'image-1',
+        image: car_marketplace_design,
         category: 'Design',
         title: 'Car Marketplace – Web Design',
         description: 'A complete branding and UI/UX design project for an online car marketplace. I created custom logos, pictograms, and responsive web layouts using Affinity Designer, Affinity Photo, and Figma — including interactive wireframes, high-fidelity mockups, and user flow planning.',
@@ -138,12 +157,11 @@ export const PortfolioListContent = [
             "Graphic Design",
             "Web Design",
             "Visual Identity"
-        ]
-        ,
+        ],
         github: 'https://github.com/David-Dostal/car-marketplace-webdesign'
     },
     {
-        image: 'image-2',
+        image: smartphone_repair_service,
         category: 'Web App',
         title: 'Smartphone Repair Service',
         description: 'A Flask web app simulating a smartphone repair service, managing users, phones, and parts with a modular structure and Jinja-based UI.',
@@ -159,7 +177,7 @@ export const PortfolioListContent = [
         github: 'https://github.com/David-Dostal/smarphone-repair-service-webapp'
     },
     {
-        image: 'image-3',
+        image: weather_api,
         category: 'Web App',
         title: 'Weather App',
         description: 'A modular Python weather web app using PyWebIO, supporting current/future forecasts via API integration, user input handling, and visual graphs in a web interface.',
@@ -170,12 +188,11 @@ export const PortfolioListContent = [
             "Weather API",
             "Geocoding",
             "Matplotlib"
-        ]
-        ,
+        ],
         github: 'https://github.com/David-Dostal/weather-app-python'
     },
     {
-        image: 'image-4',
+        image: spa_database_design,
         category: 'Misc',
         title: 'Spa Database Design',
         description: 'A normalized relational database project with complete documentation, ER diagrams, and matrix analysis. The design includes logical and physical schemas modeled in Oracle Data Modeler, focusing on structured business data.',
@@ -187,12 +204,11 @@ export const PortfolioListContent = [
             "Schema Design",
             "Logical Model",
             "Physical Model"
-        ]
-        ,
+        ],
         github: 'https://github.com/David-Dostal/spa-database-design'
     },
     {
-        image: 'image-3',
+        image: spa_reservatin_system_design,
         category: 'Misc',
         title: 'Spa Reservation System Design',
         description: 'A system analysis and design project focused on attendance and reservation systems. It includes UML diagrams, project documentation, and enterprise architecture models using tools like Enterprise Architect and Oracle Data Modeler.',
@@ -206,7 +222,7 @@ export const PortfolioListContent = [
         github: 'https://github.com/David-Dostal/spa-reservation-system-design'
     },
     {
-        image: 'image-4',
+        image: bang_java,
         category: 'Standalone App',
         title: 'Bang!',
         description: 'An incomplete JavaFX desktop game based on the card game Bang!, featuring FXML-based UI, structured controllers, modular card classes, and partial game logic with custom styling and assets.',
@@ -219,19 +235,17 @@ export const PortfolioListContent = [
         ],
         github: 'https://github.com/David-Dostal/bang-javafx'
     },
-        {
-        image: 'image-4',
+    {
+        image: zebra_puzzle_prolog,
         category: 'Misc',
         title: 'Zebra Puzzle in Prolog',
         description: 'A Prolog-based solver for the Einstein logic puzzle, using declarative rules to compute the unique solution from 15 logical constraints.',
         tags: [
-  "Prolog",
-  "Logic Programming",
-  "Constraint Solving",
-  "Declarative Programming"
-]
-,
+            "Prolog",
+            "Logic Programming",
+            "Constraint Solving",
+            "Declarative Programming"
+        ],
         github: 'https://github.com/David-Dostal/zebrapuzzle-prolog'
     }
 ];
-

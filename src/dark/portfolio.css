@@ -17,13 +17,13 @@
   flex-shrink: 0;
 }
 
-/* Tag scroll wrapper with buttons */
-.tag-scroll-wrapper {
-  display: flex;
-  align-items: center;
-  position: relative;
+  /* Tag scroll wrapper with buttons */
+  .tag-scroll-wrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
   margin-top: 12px;
-}
+  margin-bottom: 16px; /* 👈 Add this */  }
 
 /* Tag list container */
 .project-tags-scroll {
@@ -76,4 +76,99 @@
   font-size: 14px;
   color: #999;
   line-height: 1.5;
+}
+
+
+/* Hide the description by default */
+.project-details {
+  opacity: 0;
+  max-height: 0;
+  transition: opacity 0.3s, max-height 0.3s;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+/* Show description on hover of the card */
+.portfolio:hover .project-details {
+  opacity: 1;
+  max-height: 500px; /* large enough for your content */
+  pointer-events: auto;
+}
+
+
+/* Always show a black background under the card's content */
+.portfolio .content .inner {
+  background: rgba(0,0,0,0.82); /* or 0.95 for more opacity */
+  border-radius: 14px;
+  padding: 16px 18px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+  position: relative;
+}
+
+
+/* Make the parent .portfolio relative for absolute positioning */
+.portfolio {
+  position: relative;
+  overflow: hidden;
+  
+}
+
+/* Bottom content card, full width, always at bottom */
+.portfolio-card-bottom {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(30,30,30,0.93);
+  padding: 28px 28px 24px 28px;
+  color: #fff;
+  z-index: 2;
+  width: 100%;
+  /* Optional: backdrop filter for more glass effect */
+  /* backdrop-filter: blur(6px); */
+  box-shadow: 0 -2px 32px rgba(0,0,0,0.18);
+}
+
+/* Make sure links and headers inside are white */
+.portfolio-card-bottom h4,
+.portfolio-card-bottom a,
+.portfolio-card-bottom p {
+  color: #fff;
+  margin: 0 0 10px 0;
+}
+
+/* Optional: Large title styling */
+.portfolio-card-bottom h4 {
+  font-size: 2.1rem;
+  font-weight: 800;
+}
+
+/* Responsive: for mobile, a bit less padding */
+@media (max-width: 600px) {
+  .portfolio-card-bottom {
+    padding: 14px 10px 12px 10px;
+    border-radius: 0 0 16px 16px;
+  }
+}
+
+
+/* Force equal height for all slick slides */
+.slick-slide > div {
+  height: 100%;
+  width: 100%;
+}
+.thumbnail-inner {
+  width: 100%;
+  aspect-ratio: 16 / 9; /* common aspect ratio, adjust as needed */
+  overflow: hidden;
+  background: #000;
+  position: relative;
+}
+
+.thumbnail-inner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
 }
