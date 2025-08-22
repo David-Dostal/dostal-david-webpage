@@ -4,20 +4,18 @@ import Helmet from "../component/common/Helmet";
 
 import FooterTwo from "../component/footer/FooterTwo";
 import HeaderThree from "../component/header/HeaderThree";
-import BlogContent from "../elements/blog/BlogContent";
 import ServiceList from "../elements/service/ServiceList";
-import TabTwo from "../elements/tab/TabTwo";
+import CustomTab from "../elements/tab/CustomTab";
 
-import about from "../assets/images/about/about-8.jpg";
 import contactImg from "../assets/images/about/about-9.jpg";
 import WordEffect1 from "../component/common/WordEffect";
-import MagneticButton from "../component/magnetic/MagneticButton"; // adjust path as needed
+import MagneticButton from "../component/magnetic/MagneticButton";
 import Contact from "../elements/Contact";
 import { useState } from 'react';
-import SkillMapModal from "../component/SkillMapModal"; // update path if needed
+import SkillMapModal from "../component/SkillMapModal";
 
 
-import PortfolioWithCategoryTabs from "./Portfolio"; // if you renamed Portfolio.jsx to act as category tabs
+import PortfolioWithCategoryTabs from "./Portfolio";
 import { PortfolioListContent } from "../data/portfolio/PortfolioListContent";
 import "../assets/css/dual-ball-loader.css";
 
@@ -36,7 +34,6 @@ const PortfolioLanding = () => {
     subtitle = "Aspiring IT student, highly motivated to become a future IT professional.",
     description =
       "Ever since high school, I wanted to be educated in as many fields as possible, so that I can view the world from different perspectives. This approach has continuously helped me strengthen my problem-solving skills. I am under belief that the proven orthodox solution may not always be the most effective one and that there is always space for improvement. My passion for staying up to date with the latest technologies also ensures, that my work attitude stays agile and fresh. I am eager to join an organization where I can continue to grow and make a significant impact.";
-  const PostList = BlogContent.slice(0, 3);
   const [isSkillMapOpen, setIsSkillMapOpen] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState('All');
 
@@ -125,7 +122,7 @@ const PortfolioLanding = () => {
           <div className="col-lg-7 col-md-6 col-12">
             <div className="about-inner inner">
               <div className="row mt--30">
-                <TabTwo tabStyle="tab-style--1" />
+                <CustomTab tabStyle="tab-style--1" />
               </div>
             </div>
           </div>

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 
-class TabsTwo extends Component {
+class CustomTab extends Component {
   render() {
     let tab1 = "Main skills",
       tab3 = "Experience",
@@ -21,47 +21,53 @@ class TabsTwo extends Component {
                     <Tab>{tab4}</Tab>
                   </TabList>
 
-<TabPanel>
-  <div className="single-tab-content">
-    <ul>
-      <li>
-        <strong>Coding:</strong> Python, TypeScript, Java, Kotlin, C++, Swift
-      </li>
-      <li>
-        <strong>Mobile:</strong> Android (Kotlin, Jetpack Compose), iOS (Swift, SwiftUI)
-      </li>
-      <li>
-        <strong>Frontend:</strong> HTML, CSS, Vue.js, React (learning)
-      </li>
-      <li>
-        <strong>Backend:</strong> Flask, Spring Boot, REST APIs, Microservices, Enterprise App Concepts, Security (OAuth2) 
-      </li>
-      <li>
-        <strong>Design:</strong> Figma, Affinity Designer, Affinity Photo
-      </li>
-      <li>
-        <strong>Database:</strong> Database Design & Modeling, SQL (PostgreSQL, SQLite), NoSQL (MongoDB)
-      </li>
-      <li>
-        <strong>System Design:</strong> UML, Use Case & Class Diagrams, etc. (Enterprise Architect, Oracle Data Modeler)
-      </li>
-      <li>
-        <strong>Testing:</strong> Unit Testing, API Testing, Integration Testing (Cypress), E2E Testing (Cypress)
-      </li>
-      <li>
-        <strong>Tools:</strong> Git, Docker, Docker Compose, MS Office, Documentation, LaTeX
-      </li>
-      <li>
-        <strong>Languages:</strong> English (advanced), German (intermediate)
-      </li>
-      <li>
-        <strong>Miscellaneous:</strong> Driving license (B)
-      </li>
-    </ul>
-  </div>
-</TabPanel>
-
-
+                  <TabPanel>
+                    <div className="single-tab-content">
+                      <ul>
+                        <li>
+                          <strong>Coding:</strong> Python, TypeScript, Java, Kotlin, C++,
+                          Swift
+                        </li>
+                        <li>
+                          <strong>Mobile:</strong> Android (Kotlin, Jetpack Compose), iOS
+                          (Swift, SwiftUI)
+                        </li>
+                        <li>
+                          <strong>Frontend:</strong> HTML, CSS, Vue.js, React (learning)
+                        </li>
+                        <li>
+                          <strong>Backend:</strong> Flask, Spring Boot, REST APIs,
+                          Microservices, Enterprise App Concepts, Security (OAuth2)
+                        </li>
+                        <li>
+                          <strong>Design:</strong> Figma, Affinity Designer, Affinity Photo
+                        </li>
+                        <li>
+                          <strong>Database:</strong> Database Design & Modeling, SQL
+                          (PostgreSQL, SQLite), NoSQL (MongoDB)
+                        </li>
+                        <li>
+                          <strong>System Design:</strong> UML, Use Case & Class Diagrams,
+                          etc. (Enterprise Architect, Oracle Data Modeler)
+                        </li>
+                        <li>
+                          <strong>Testing:</strong> Unit Testing, API Testing, Integration
+                          Testing (Cypress), E2E Testing (Cypress)
+                        </li>
+                        <li>
+                          <strong>Tools:</strong> Git, Docker, Docker Compose, MS Office,
+                          Documentation, LaTeX
+                        </li>
+                        <li>
+                          <strong>Languages:</strong> English (advanced), German
+                          (intermediate)
+                        </li>
+                        <li>
+                          <strong>Miscellaneous:</strong> Driving license (B)
+                        </li>
+                      </ul>
+                    </div>
+                  </TabPanel>
 
                   <TabPanel>
                     <div className="single-tab-content">
@@ -111,19 +117,23 @@ class TabsTwo extends Component {
                       <ul>
                         <li>
                           <a href="/service">
-                            <strong>Mendel University in Brno, Czech Republic</strong> - Computer Science
+                            <strong>Mendel University in Brno, Czech Republic</strong> -
+                            Computer Science
                           </a>
                           2021 – Present
                         </li>
                         <li>
                           <a href="/service">
-                            <strong>Jazyková škola AMIGAS, Czech Republic</strong> - Language School
+                            <strong>Jazyková škola AMIGAS, Czech Republic</strong> - Language
+                            School
                           </a>
                           Graduated 2020
                         </li>
                         <li>
                           <a href="/service">
-                            <strong>Gymnázium Bystřice nad Pernštejnem, Czech Republic</strong> - Grammar School
+                            <strong>Gymnázium Bystřice nad Pernštejnem, Czech Republic</strong>
+                            {" "}
+                            - Grammar School
                           </a>
                           Graduated 2019
                         </li>
@@ -131,9 +141,10 @@ class TabsTwo extends Component {
                       <div style={{ marginTop: "1em" }}>
                         <p className="theme-gradient">Certifications & Memberships:</p>
                         <ul>
-                          <li><strong>Member of Mensa</strong>                               
+                          <li>
+                            <strong>Member of Mensa</strong>
                             <span> - IQ certificate available</span>
-                            </li>
+                          </li>
                           <li>Callan method – C1</li>
                         </ul>
                       </div>
@@ -150,4 +161,4 @@ class TabsTwo extends Component {
   }
 }
 
-export default TabsTwo;
+export default CustomTab;
