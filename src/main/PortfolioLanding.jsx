@@ -7,7 +7,6 @@ import HeaderThree from "../component/header/HeaderThree";
 import ServiceList from "../elements/service/ServiceList";
 import CustomTab from "../elements/tab/CustomTab";
 
-import contactImg from "../assets/images/about/about-9.jpg";
 import WordEffect1 from "../component/common/WordEffect";
 import MagneticButton from "../component/magnetic/MagneticButton";
 import Contact from "../elements/contact/Contact";
@@ -213,7 +212,7 @@ const PortfolioLanding = () => {
       {/* Start COntact Area */}
       <div id="contact" className="fix">
         <div className="rn-contact-area ptb--120 bg_color--5">
-          <Contact contactImages={contactImg} contactTitle="Hire Me." />
+          <Contact contactTitle="Hire Me." />
         </div>
       </div>
       {/* End COntact Area */}
