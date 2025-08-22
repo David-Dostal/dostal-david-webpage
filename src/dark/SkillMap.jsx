@@ -9,7 +9,7 @@ import HeaderThree from "../component/header/HeaderThree";
 import { TransformComponent, TransformWrapper } from "react-zoom-pan-pinch";
 import contactImg from "../assets/images/about/about-9.jpg";
 import serviceImage from "../assets/images/service/my-service-map.png"; // <- your big PNG
-import Contact from "../elements/Contact";
+import Contact from "../elements/contact/Contact";
 
 
 const SkillMap = () => {

@@ -10,7 +10,7 @@ import CustomTab from "../elements/tab/CustomTab";
 import contactImg from "../assets/images/about/about-9.jpg";
 import WordEffect1 from "../component/common/WordEffect";
 import MagneticButton from "../component/magnetic/MagneticButton";
-import Contact from "../elements/Contact";
+import Contact from "../elements/contact/Contact";
 import { useState } from 'react';
 import SkillMapModal from "../component/SkillMapModal";
 
