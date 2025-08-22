@@ -1,238 +1,201 @@
-# \# David Dostal — Webpage (dostal-page-react)
+<div align="center">
 
-# 
+# David Dostal — Personal Webpage
 
-# A modern, fast personal website built with \*\*Vite\*\* and \*\*React\*\*, styled with \*\*SCSS\*\* and \*\*Bootstrap\*\*.  
+Modern, fast portfolio website built with **Vite** + **React**, styled with **SCSS** and **Bootstrap**.
 
-# It features a clean portfolio landing page, a skills/experience tab section, a zoomable \*\*Skill Map\*\* modal, and a polished header/footer with a sticky behavior and back‑to‑top control.
+[![Build with Vite](https://img.shields.io/badge/Built%20with-Vite-646CFF)](https://vitejs.dev/)
+[![React](https://img.shields.io/badge/React-18-61DAFB)](https://react.dev/)
+[![SCSS](https://img.shields.io/badge/Style-SCSS-CC6699)](https://sass-lang.com/)
+[![Deploy-GitHub Pages](https://img.shields.io/badge/Deploy-GitHub%20Pages-222222)](https://pages.github.com/)
 
-# 
+</div>
 
-# \## Live Demo
+## Demo
 
-# 
+Project page (GitHub Pages):
+- **https://David-Dostal.github.io/dostal-david-webpage/**
 
-# \*\*GitHub Pages:\*\* https://David-Dostal.github.io/dostal-webpage-main
+> If you use a different repository name or a custom domain, update the URL above accordingly.
 
-# 
+---
 
-# \## Features
+## Table of Contents
 
-# 
+- [Features](#features)
+- [Screenshots](#screenshots)
+- [Project Structure](#project-structure)
+- [Getting Started](#getting-started)
+- [Configuration](#configuration)
+- [Deployment](#deployment)
+- [Available Scripts](#available-scripts)
+- [Tech Stack](#tech-stack)
+- [Acknowledgements](#acknowledgements)
+- [License](#license)
 
-# \- ⚡ \*\*Vite + React\*\* app structure (`src/`, single‑page app with React Router)
+---
 
-# \- 🎯 \*\*Portfolio landing\*\* with hero copy and CTAs
+## Features
 
-# \- 🧭 \*\*Sticky header\*\* with mobile menu and smooth page section navigation
+- ⚡ **Vite + React** single‑page app
+- 🧭 **Sticky header**, smooth in‑page navigation, mobile menu
+- 🧩 **Tabbed** sections for **Main skills**, **Experience**, **Education & Certification** (`react-tabs`)
+- 🗺️ **Skill Map** modal with pan/zoom (`react-zoom-pan-pinch`)
+- 📨 **Contact** section scaffold (location, social links; form can be wired to EmailJS or a backend)
+- 🧱 **SCSS** architecture with **Bootstrap 4.6** utilities
+- 🔍 SEO helper using `react-helmet-async`
+- ♻️ Reusable components: Header, Footer, Page scroll top, Custom tabs, Service list, 404, and more
 
-# \- 🧩 \*\*Tabs\*\* for \*\*Main skills\*\*, \*\*Experience\*\*, \*\*Education \& Certification\*\* (`react-tabs`)
+## Screenshots
+
+> Replace the image(s) below with your own screenshots.
+>
+> ```html
+> <img src="src/assets/images/preview/landing.png" alt="Portfolio landing preview" width="800" />
+> ```
+
+---
+
+## Project Structure
+
+```
+.
+├── index.html
+├── vite.config.js
+├── package.json
+├── src/
+│   ├── App.jsx
+│   ├── main.jsx
+│   ├── index.scss
+│   ├── assets/               # images, icons, SCSS partials
+│   ├── component/            # header, footer, sliders, skillmap, etc.
+│   ├── elements/             # contact, service, tabs, 404 page
+│   └── main/                 # page-level composites (e.g., PortfolioLanding)
+└── public/                   # static assets (if any)
+```
 
-# \- 🗺️ \*\*Skill Map\*\* modal with pan/zoom (`react-zoom-pan-pinch`)
+---
+
+## Getting Started
+
+> Requires **Node.js 18+** and **npm**.
+
+```bash
+# Install dependencies
+npm install
 
-# \- 📨 \*\*Contact\*\* section scaffold (location shown; form wiring ready for EmailJS if desired)
+# Start local development
+npm run dev
+# Open the printed URL (for example http://localhost:5173)
+```
 
-# \- 🧱 \*\*SCSS\*\* architecture and \*\*Bootstrap 4.6\*\* utility classes
+### Production Build
 
-# \- 🔍 SEO helper via `react-helmet-async` (`src/component/common/Helmet.jsx`)
+```bash
+npm run build
+# Preview the production build locally
+npm run preview
+```
 
-# \- 🧩 Ready-to-use components: `HeaderThree`, `FooterTwo`, `PageScrollTop`, `CustomTab`, `ServiceList`, `Error404`, etc.
+---
 
-# 
+## Configuration
 
-# \## Project Structure (key paths)
+### Vite base path for GitHub Pages
 
-# 
+If this is a **project** site (served at `https://<user>.github.io/<repo>/`), set `base` to your repository name so asset URLs resolve correctly.
 
-# ```
+```js
+// vite.config.js
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react-swc";
 
-# .
+export default defineConfig({
+  base: "/dostal-david-webpage/", // ← update if your repo name changes
+  plugins: [react()],
+  css: {
+    preprocessorOptions: {
+      scss: {
+        api: "modern-compiler",
+        silenceDeprecations: ["import", "global-builtin"],
+      },
+    },
+  },
+});
+```
 
-# ├── index.html
+If you use a **user** site (`https://<user>.github.io/`), `base` can remain `/`.
 
-# ├── vite.config.js
+---
 
-# ├── package.json
+## Deployment
 
-# ├── src/
+You can deploy via **gh-pages** branch or via **docs/** on `main`. Choose one method.
 
-# │   ├── App.jsx
+### Option A — `gh-pages` branch (recommended)
 
-# │   ├── main.jsx
+1. Add scripts (if not present):
+   ```jsonc
+   // package.json
+   {
+     "scripts": {
+       "predeploy": "npm run build",
+       "deploy": "gh-pages -d dist"
+     },
+     "devDependencies": {
+       "gh-pages": "^6"
+     }
+   }
+   ```
+2. Publish:
+   ```bash
+   npm run build
+   npm run deploy
+   ```
 
-# │   ├── index.scss
+### Option B — `docs/` folder on `main`
 
-# │   ├── assets/               # images, icons, SCSS partials
+```bash
+npm run build
+rm -rf docs
+cp -r dist docs
+git add docs && git commit -m "Update docs build"
+git push
+```
 
-# │   ├── component/            # header, footer, sliders, skillmap, etc.
+Then set **Settings → Pages** to *main* / */docs*.
 
-# │   ├── elements/             # contact, service, tabs, 404 page
+> If CSS or JS does not load on GitHub Pages, verify the `base` option in `vite.config.js` and confirm the **Pages → Source** settings.
 
-# │   └── main/                 # page-level composites (e.g., PortfolioLanding)
+---
 
-# └── public/                   # static assets (if any)
+## Available Scripts
 
-# ```
+```bash
+npm run dev       # Start dev server
+npm run build     # Build production site into ./dist
+npm run preview   # Preview ./dist locally
+npm run lint      # If configured: run ESLint
+npm run deploy    # Publish to GitHub Pages (gh-pages)
+```
 
-# 
+---
 
-# \## Getting Started
+## Tech Stack
 
-# 
+- **React 18** + **Vite 5**
+- **SCSS** with **Bootstrap 4.6** helpers
+- **react-helmet-async**, **react-tabs**, **react-slick**, **react-zoom-pan-pinch**
 
-# > Requires \*\*Node.js 18+\*\* (Vite 5) and \*\*npm\*\*.
+---
 
-# 
+## Acknowledgements
 
-# ```bash
+- Template inspiration from **Trydo React** themes. Components and styles have been adapted to fit this site.
+- Thanks to the open‑source ecosystem.
 
-# \# Install dependencies
+---
 
-# npm install
+## License
 
-# 
-
-# \# Start a local dev server
-
-# npm run dev
-
-# \# Open the printed URL (e.g., http://localhost:5173)
-
-# ```
-
-# 
-
-# \### Production Build
-
-# 
-
-# ```bash
-
-# npm run build
-
-# \# Preview the production build locally
-
-# npm run preview
-
-# ```
-
-# 
-
-# \### Deploy to GitHub Pages
-
-# 
-
-# This repository is configured to publish with \*\*gh-pages\*\* (see `package.json` scripts).
-
-# 
-
-# ```bash
-
-# \# Build the production site
-
-# npm run build
-
-# 
-
-# \# Publish the contents of ./dist to the gh-pages branch
-
-# npm run deploy
-
-# ```
-
-# 
-
-# > \*\*Important for GitHub Pages\*\*: If this is a \*\*project\*\* site (served at `https://<user>.github.io/<repo>/`) set the Vite base path to your repo name so built asset URLs work:
-
-# >
-
-# > ```js
-
-# > // vite.config.js
-
-# > import { defineConfig } from "vite";
-
-# > import react from "@vitejs/plugin-react-swc";
-
-# >
-
-# > export default defineConfig({
-
-# >   base: "/{your-repo-name}/",
-
-# >   plugins: \[react()],
-
-# >   css: {
-
-# >     preprocessorOptions: {
-
-# >       scss: {
-
-# >         api: "modern-compiler",
-
-# >         silenceDeprecations: \["import", "global-builtin"],
-
-# >       },
-
-# >     },
-
-# >   },
-
-# > });
-
-# > ```
-
-# >
-
-# > Replace `{your-repo-name}` with your repository name (for example: `/dostal-webpage-main/`). If you use a \*\*user\*\* site (`https://<user>.github.io/`), the `base` can stay `/`.
-
-# 
-
-# If the site does not load CSS/JS on GitHub Pages, double-check the `base` option in `vite.config.js` and the \*\*Pages → Source\*\* setting on GitHub.
-
-# 
-
-# 
-
-# \## Scripts
-
-# 
-
-# Common scripts from `package.json`:
-
-# 
-
-# ```bash
-
-# npm run dev       # Start dev server
-
-# npm run build     # Build production site into ./dist
-
-# npm run preview   # Preview ./dist locally
-
-# npm run lint      # (If configured) run ESLint
-
-# npm run deploy    # Publish to GitHub Pages (gh-pages)
-
-# ```
-
-# 
-
-# \## Acknowledgements
-
-# 
-
-# \- Initial scaffolding and styles are inspired by the \*\*Trydo React\*\* template family; components and styles have been adapted for this site.
-
-# \- Thanks to the open‑source ecosystem: `react`, `vite`, `react-tabs`, `react-helmet-async`, `react-slick`, `react-zoom-pan-pinch`, and more.
-
-# 
-
-# \## License
-
-# 
-
-# © 2025 David Dostal.
-
-
-
+© 2025 David Dostal. All rights reserved.
