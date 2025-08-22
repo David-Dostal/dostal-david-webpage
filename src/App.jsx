@@ -6,7 +6,7 @@ import "./index.scss";
 // Home layout
 
 // Dark Home Layout
-import DarkPortfolioLanding from "./dark/PortfolioLanding";
+import DarkPortfolioLanding from "./main/PortfolioLanding";
 
 // Element Layout
 import Error404 from "./elements/error404";
