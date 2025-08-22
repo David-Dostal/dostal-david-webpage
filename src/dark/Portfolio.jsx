@@ -3,7 +3,7 @@ import { Tabs, TabList, Tab, TabPanel } from "react-tabs";
 import { PortfolioListContent } from "../data/portfolio/PortfolioListContent";
 import { categories } from "../data/portfolio/categories";
 import Slider from "react-slick";
-import { slickDot } from "../page-demo/script";
+import { slickDot } from "./script";
 import "../dark/Portfolio.css";
 import "../assets/css/dual-ball-loader.css";
 

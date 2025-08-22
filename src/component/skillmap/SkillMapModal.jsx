@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
 import { FiX } from "react-icons/fi";
-import serviceImage from "../assets/images/service/my-service-map.png";
+import serviceImage from "../../assets/images/service/my-service-map.png";
 import "./SkillMapModal.css";
 
 const SkillMapModal = ({ isOpen, onClose }) => {

@@ -9,7 +9,6 @@ import "./index.scss";
 import DarkPortfolioLanding from "./dark/PortfolioLanding";
 
 // Element Layout
-import SkillMap from "./dark/SkillMap";
 import Error404 from "./elements/error404";
 
 // Blocks Layout
@@ -26,8 +25,6 @@ function App() {
           <Route path={`404`} element={<Error404 />} />
           <Route path="*" element={<Error404 />} />
 
-
-          <Route path={`/skill-map`} element={<SkillMap />} />
 
         </Route>
       </Routes>

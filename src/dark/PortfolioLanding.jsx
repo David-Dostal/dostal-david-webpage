@@ -12,7 +12,7 @@ import WordEffect1 from "../component/common/WordEffect";
 import MagneticButton from "../component/magnetic/MagneticButton";
 import Contact from "../elements/contact/Contact";
 import { useState } from 'react';
-import SkillMapModal from "../component/SkillMapModal";
+import SkillMapModal from "../component/skillmap/SkillMapModal";
 
 
 import PortfolioWithCategoryTabs from "./Portfolio";
